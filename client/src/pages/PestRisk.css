@@ -1,0 +1,392 @@
+.pest-risk-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pest-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.risk-hero-banner {
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  box-shadow: var(--shadow-md);
+  color: #ffffff;
+}
+
+.risk-level-low {
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%);
+}
+
+.risk-level-medium {
+  background: linear-gradient(135deg, #b45309 0%, #d97706 100%);
+}
+
+.risk-level-high {
+  background: linear-gradient(135deg, #991b1b 0%, #dc2626 100%);
+}
+
+.risk-hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 600px;
+}
+
+.risk-level-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  opacity: 0.9;
+}
+
+.risk-level-title {
+  font-size: 2.2rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.risk-hero-desc {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  opacity: 0.95;
+}
+
+.risk-gauge-box {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 220px;
+}
+
+.gauge-number-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+
+.gauge-score {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.gauge-total {
+  font-size: 1rem;
+  opacity: 0.7;
+}
+
+.gauge-bar-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gauge-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease-out;
+}
+
+.gauge-caption {
+  font-size: 0.72rem;
+  opacity: 0.8;
+}
+
+.risk-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .risk-details-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.risk-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.risk-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.risk-card-header h3 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.icon-red {
+  color: var(--color-danger);
+}
+
+.icon-amber {
+  color: var(--color-warning);
+}
+
+.threats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.threat-item {
+  background: #f8faf8;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.threat-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.threat-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.threat-prob {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.prob-high {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.prob-moderate, .prob-medium {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.prob-low {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.threat-type {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.threat-vector {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+}
+
+.factors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.factor-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  background: #f8faf8;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+}
+
+.factor-severity-badge {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.factor-category {
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.factor-text {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.35;
+  margin-top: 0.15rem;
+}
+
+.ipm-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 860px) {
+  .ipm-steps-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ipm-step-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  padding: 1rem 1.15rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.step-num-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-primary-700);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.step-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.step-desc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.sandbox-controls-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .sandbox-controls-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .sandbox-controls-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: #f8faf8;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+}
+
+.slider-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.82rem;
+}
+
+.slider-label-row span {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-secondary);
+}
+
+.slider-label-row strong {
+  color: var(--color-primary-800);
+}
+
+.slider-group input[type='range'] {
+  accent-color: var(--color-primary-600);
+  width: 100%;
+}
+
+.slider-ticks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.simulator-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.pest-disclaimer-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  color: #334155;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
